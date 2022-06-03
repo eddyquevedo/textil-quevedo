@@ -2,14 +2,19 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/NavBar/Navbar';
+import Titulo from './components/titulo/titulo';
+import ComponentContainer from './components/ItemListContainer/ComponentContainer';
 
-function App() {
-  console.log('eddy')
+
+function App() { //componente contenedor
+  let contenido = 'Buenos Aires - Argentina' // estado
+  let tituloApp = 'MAQUINAS DE COSER DON QUEVEDO'
   return (
     <>
-      <Navbar />
+      <Navbar param1= {contenido} param2='contenido de app' />
+      <Titulo titulo={tituloApp} subTitulo='Encontrá acá la herramienta que Buscás'/>
+      <ComponentContainer />
     </>
   );
 }
-
 export default App;
