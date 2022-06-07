@@ -5,16 +5,24 @@ import Navbar from './components/NavBar/Navbar';
 import Titulo from './components/titulo/titulo';
 import ComponentContainer from './components/ItemListContainer/ComponentContainer';
 
-
 function App() { //componente contenedor
   let contenido = 'Buenos Aires - Argentina' // estado
   let tituloApp = 'MAQUINAS DE COSER DON QUEVEDO'
+
+
   return (
     <>
-      <Navbar param1= {contenido} param2='contenido de app' />
+      <Navbar param1= {contenido}/>
       <Titulo titulo={tituloApp} subTitulo='Encontrá acá la herramienta que Buscás'/>
-      <ComponentContainer />
+      <ComponentContainer saludo ='Bienvenidos'/>
     </>
   );
 }
 export default App;
+
+
+
+
+
+
+
