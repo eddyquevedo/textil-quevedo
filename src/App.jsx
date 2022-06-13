@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/NavBar/Navbar';
 import Titulo from './components/titulo/titulo';
 import ComponentContainer from './components/ItemListContainer/ComponentContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() { //componente contenedor
   let contenido = 'Buenos Aires - Argentina' // estado
@@ -15,6 +16,7 @@ function App() { //componente contenedor
       <Navbar param1= {contenido}/>
       <Titulo titulo={tituloApp} subTitulo='Encontrá acá la herramienta que Buscás'/>
       <ComponentContainer saludo ='Bienvenidos'/>
+      <ItemDetailContainer />
     </>
   );
 }
