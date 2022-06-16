@@ -7,7 +7,7 @@ const Item = ({info}) => {
   <div className="card-body">
     <h3 className="card-title">{info.title}</h3>
     <h5 className="card-text"> {info.Text} Disponible</h5>
-    <a href="#" className="btn btn-primary">COMPRAR</a>
+    <h2 className="btn btn-primary"> COMPRAR </h2>
   </div>
 </div>
   );

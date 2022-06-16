@@ -8,7 +8,7 @@ const ComponentContainer = ({saludo}) => {
   const [data,setData] = useState([]); // el estado es data se inicia en un array vacio y con su setData pasan a ser una raiz de objetos luego se envia a itemlist.
   useEffect(() =>{ //crear una promesa que traiga el valor en unos 2 seg para simular que hay demoras en la base de datos y luego setear la data y al haber un cambio vuelve a renderizar.
     getFetch()
-      .then((res) => setData(res)); //captura esa respuesta y las devuelve y setea data 
+      .then((res) => setData(res)); //captura esa respuesta y las devuelve y setea data
   },[])
 
   const onAdd = (cantidad) =>{ //la funcion onAdd indica la cantidad que el usuario escogio al final
