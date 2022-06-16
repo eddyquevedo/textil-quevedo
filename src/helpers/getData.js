@@ -15,7 +15,8 @@ export const getFetch = (id) => {
                 }
             },2000); //aqui te devuelve en 2 seg.
         })
-}
+
+    }
 
 
 
