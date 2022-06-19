@@ -1,45 +1,45 @@
+import {Navbar, Container, Nav,NavDropdown} from "react-bootstrap"
+import {Link,NavLink} from 'react-router-dom'
 import CartWidget from "../CartWidget/CartWidget"
-
-const Navbar = ({param1}) => {
-
-  return (
-    <div>
-    <nav className="navbar navbar-expand-lg bg-dark">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#">INICIO</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">QUIENES SOMOS</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">MAQUINAS</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">REPUESTOS</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">SERVICIOS</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">COMO LLEGAR </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">CONTACTO</a>
-        </li>
+function NavBarExample ({param1}) {
+    return (
         <div>
-        <CartWidget />
+            <Navbar className="navBg" collapseOnSelect expand="lg" variant="dark">
+                <Container>
+                <Navbar.Brand as={NavLink} to='/'> MAQUINARIAS DON QUEVEDO </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <NavLink to='/'
+                            className={({ isActive })=> isActive ? 'clase1' : 'clase2'
+                        }> INICIO  </NavLink>
+                        <NavLink to="/about"> QUIENES SOMOS </NavLink>
+                        <NavDropdown title=" TIPOS " id="collasible-nav-dropdown">
+                        <NavLink to="/categoria/maquina1" >MAQUINAS FAMILIARES</NavLink>
+                        <NavDropdown.Divider />
+                        <NavLink to="/categoria/maquina2">MAQUINAS SEMI-INDUSTRIALES</NavLink>
+                        <NavDropdown.Divider />
+                        <NavLink to="/categoria/maquina3">MAQUINAS INDUSTRIALES</NavLink>
+                        <NavDropdown.Divider />
+                        </NavDropdown>
+                        <NavLink to=""> COMO LLEGAR </NavLink>
+                        <NavLink to="/contact"> CONTACTO </NavLink>
+                    </Nav>
+                    <Nav>
+                    <Link to='/cart'>
+                        <button className='btn btn-outline-primary'>
+                            Carrito
+                        </button>
+                    </Link>
+                    <div>
+                    <CartWidget />
+                    </div>
+                    </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+            <h2>{param1}</h2>
         </div>
-      </ul>
-    </div>
-  </div>
-</nav>
-    <h2>{param1}</h2>
-</div>
-  )
+    )
 }
-
-export default Navbar
+export default NavBarExample

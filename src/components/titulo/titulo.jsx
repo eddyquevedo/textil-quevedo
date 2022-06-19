@@ -1,10 +1,10 @@
-const Titulo = ({titulo,subTitulo}) => {
+const TituloTotal = ({tit,sub}) => {
     return(
-        <>
-    <h1>{titulo}</h1>
-    <h2>{subTitulo}</h2>
-    </>
+    <div>
+    <h1>{tit}</h1>
+    <h2>{sub}</h2>
+    </div>
     )
 }
 
-export default Titulo
+export default TituloTotal;
