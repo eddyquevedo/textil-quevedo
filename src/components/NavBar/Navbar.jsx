@@ -6,7 +6,7 @@ function NavBarExample ({param1}) {
         <div>
             <Navbar className="navBg" collapseOnSelect expand="lg" variant="dark">
                 <Container>
-                <Navbar.Brand as={NavLink} to='/'> MAQUINARIAS DON QUEVEDO </Navbar.Brand>
+                <Navbar.Brand as={NavLink} to='/'> "MAQUINARIAS DON QUEVEDO" </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
