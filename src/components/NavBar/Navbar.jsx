@@ -1,5 +1,5 @@
 import {Navbar, Container, Nav,NavDropdown} from "react-bootstrap"
-import {Link,NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import CartWidget from "../CartWidget/CartWidget"
 function NavBarExample ({param1}) {
     return (
@@ -26,11 +26,6 @@ function NavBarExample ({param1}) {
                         <NavLink to="/contact"> CONTACTO </NavLink>
                     </Nav>
                     <Nav>
-                    <Link to='/cart'>
-                        <button className='btn btn-outline-primary'>
-                            Carrito
-                        </button>
-                    </Link>
                     <div>
                     <CartWidget />
                     </div>

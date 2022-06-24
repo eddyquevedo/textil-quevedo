@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart.js';
 import About from './components/about.js';
 import Contact from './components/contact';
+import {CartContextProvider } from './contexts/cartContext';
 
 
 function App() { //componente contenedor
@@ -17,6 +18,7 @@ function App() { //componente contenedor
 
 
   return (
+    <CartContextProvider>
     <Rutas>
       <NavBarExample param1= {contenido}/>
       <Routes>
@@ -30,6 +32,7 @@ function App() { //componente contenedor
       <Route path='*' element={<Navigate replace to='/' />}/>
       </Routes>
     </Rutas>
+    </CartContextProvider>
   );
 }
 export default App;
